@@ -2,6 +2,6 @@
 {
     public abstract class GraphicalPrimitive
     {
-
+        public abstract double CalculateArea();
     }
 }
