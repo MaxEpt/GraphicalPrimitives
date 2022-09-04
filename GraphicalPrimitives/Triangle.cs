@@ -18,12 +18,10 @@ namespace GraphicalPrimitives
         {
             get 
             {
-                if (SideALength > SideBLength && SideALength > SideCLength)
-                    return Math.Round(Math.Pow(SideALength, 2), 3) == Math.Round(Math.Pow(SideBLength, 2) + Math.Pow(SideCLength, 2), 3);
-                else if (SideBLength > SideCLength)
-                    return Math.Round(Math.Pow(SideBLength, 2), 3) == Math.Round(Math.Pow(SideALength, 2) + Math.Pow(SideCLength, 2), 3);
-                else
-                    return Math.Round(Math.Pow(SideCLength, 2), 3) == Math.Round(Math.Pow(SideALength, 2) + Math.Pow(SideBLength, 2), 3);
+                return
+                    Math.Round(Math.Pow(SideALength, 2), 3) == Math.Round(Math.Pow(SideBLength, 2) + Math.Pow(SideCLength, 2), 3) ||
+                    Math.Round(Math.Pow(SideBLength, 2), 3) == Math.Round(Math.Pow(SideALength, 2) + Math.Pow(SideCLength, 2), 3) ||
+                    Math.Round(Math.Pow(SideCLength, 2), 3) == Math.Round(Math.Pow(SideALength, 2) + Math.Pow(SideBLength, 2), 3);
             }
         }
 
