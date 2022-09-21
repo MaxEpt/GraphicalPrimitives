@@ -39,6 +39,16 @@ namespace GraphicalPrimitives
             SideCLength = sideCLength;
         }
 
+        public Triangle(double sideALength,
+                        double sideBLength,
+                        double sideCLength,
+                        IDoubleCompareService doubleCompareService) : base(doubleCompareService)
+        {
+            SideALength = sideALength;
+            SideBLength = sideBLength;
+            SideCLength = sideCLength;
+        }
+
         public override double CalculateArea()
         {
             double halfPerimeter = (SideALength + SideBLength + SideCLength) / 2;
